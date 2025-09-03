@@ -1,0 +1,39 @@
+public class Receta {
+   private String nombre;
+   private int tiempo;
+   private Strings dificultad;
+   private Strings ingredientes;
+   
+public Receta(Strings, int, Strings, Strings) {
+    this.nombre = nombre;
+    this.tiempo = tiempo;
+    this.dificultad = dificultad;
+    this.ingredientes = ingredientes;
+}
+public void setNombre(Strings nombre) {
+    this.nombre = nombre;
+    public Strings getNombre() {
+         return nombre;
+    }     
+}
+public void setNombre(int tiempo) {
+    this.tiempo = tiempo;
+    public int getNombre() {
+        return tiempo;
+    }
+}     
+public void setNombre(Strings dificultad) {
+    this.dificultad = dificultad;
+    public Strings getNombre() {
+         return dificultad;
+    }
+}    
+public void setNombre(Strings ingredientes) {
+    this.ingredientes = ingredientes;
+    public Strings getNombre() { 
+           return ingredientes;
+    }
+}
+
+)   
+}
