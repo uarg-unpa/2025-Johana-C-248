@@ -4,7 +4,7 @@ public class Receta {
    private Strings dificultad;
    private Strings ingredientes;
    
-public Receta(Strings, int, Strings, Strings) {
+public Receta(Strings nombre, int tiempo, Strings dificultad, Strings ingredientes) {
     this.nombre = nombre;
     this.tiempo = tiempo;
     this.dificultad = dificultad;
@@ -16,24 +16,59 @@ public void setNombre(Strings nombre) {
          return nombre;
     }     
 }
-public void setNombre(int tiempo) {
+public void setTiempo(int tiempo) {
     this.tiempo = tiempo;
-    public int getNombre() {
+    public int getTiempo() {
         return tiempo;
     }
 }     
-public void setNombre(Strings dificultad) {
+public void setDificultad(Strings dificultad) {
     this.dificultad = dificultad;
-    public Strings getNombre() {
+    public Strings getDificultad() {
          return dificultad;
     }
 }    
-public void setNombre(Strings ingredientes) {
+public void setIngredientes(Strings ingredientes) {
     this.ingredientes = ingredientes;
-    public Strings getNombre() { 
+    public Strings getIngredientes() { 
            return ingredientes;
     }
 }
-
-)   
+public Strings esTiempo() {
+    if (this.tiempo < 30) {
+        return "receta rapida";
+    }
+    else if (this.tiempo <60) {
+        return "receta intermedia";
+    }
+    else {
+        return "receta larga";
+    }    
+    }
+public void aumentarTiempo(int minutos) {
+    this.tiempo += minutos;
+}
+public static void main(String[] args) {
+    receta receta1, receta2;
+    receta1 = new receta("tarta de manzana", 45, "media", 5);
+    receta2 = new receta("pizza casera", 90, "media", 7);
+  
+    System.out.println("el nombre de la receta es: " + receta1.getNombre());
+    System.out.println("el tiempo de la receta es: " + receta1.getTiempo());
+    System.out.println("la dificultad de la receta es: " + receta1.getDificultad());
+    System.out.println("la cantidad de ingredientes de la receta es; " + receta1.getIngredientes());
+    System.out.println(receta1.esTiempo());
+    receta1.aumentarTiempo(20);
+    System.out.println("el nuevo tiempo de la receta es: " + receta1.getTiempo());
+    System.out.println(receta1.esTiempo());
+   
+    System.out.println("el nombre de la receta es: " + receta2.getNombre());
+    System.out.println("el tiempo de la receta es: " + receeta2.getTtiempo());
+    System.out.println("la dificultad de la receta es: " + receta2.getDificultad());
+    System.out.println("la cantidad de ingredientes de la receta es: " + receta2.getIngredientes());
+    System.out.println(receta2.esTiempo());
+    receta2.aumentarTiempo(0);
+    Sistem.out.println("el nuevo tiempo de la receta es: " + receta2.getTiempo());
+    System.out.println(receta2.esTiempo());
+    }
 }
