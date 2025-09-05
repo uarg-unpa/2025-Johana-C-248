@@ -4,54 +4,62 @@ public class Receta {
    private Strings dificultad;
    private Strings ingredientes;
    
-public Receta(Strings nombre, int tiempo, Strings dificultad, Strings ingredientes) {
-    this.nombre = nombre;
-    this.tiempo = tiempo;
-    this.dificultad = dificultad;
-    this.ingredientes = ingredientes;
-}
-public void setNombre(Strings nombre) {
-    this.nombre = nombre;
+   public Receta(Strings nombre, int tiempo, Strings dificultad, Strings ingredientes) {
+         this.nombre = nombre;
+         this.tiempo = tiempo;
+         this.dificultad = dificultad;
+         this.ingredientes = ingredientes;
+     }
+
+    public void setNombre(Strings nombre) {
+         this.nombre = nombre;
+    } 
+
     public Strings getNombre() {
          return nombre;
     }     
-}
-public void setTiempo(int tiempo) {
-    this.tiempo = tiempo;
+
+     public void setTiempo(int tiempo) {
+          this.tiempo = tiempo;
+     }
+
     public int getTiempo() {
         return tiempo;
     }
-}     
-public void setDificultad(Strings dificultad) {
-    this.dificultad = dificultad;
+    
+    public void setDificultad(Strings dificultad) {
+         this.dificultad = dificultad;
+    }
+
     public Strings getDificultad() {
          return dificultad;
     }
-}    
-public void setIngredientes(Strings ingredientes) {
-    this.ingredientes = ingredientes;
+ 
+    public void setIngredientes(Strings ingredientes) {
+           this.ingredientes = ingredientes;
+     }
+    
     public Strings getIngredientes() { 
            return ingredientes;
     }
-}
-public Strings esTiempo() {
-    if (this.tiempo < 30) {
-        return "receta rapida";
-    }
-    else if (this.tiempo <60) {
-        return "receta intermedia";
-    }
-    else {
-        return "receta larga";
+
+    public Strings esTiempo() {
+        if (this.tiempo < 30) {
+             return "receta rapida";
+    } else if (this.tiempo <60) {
+         return "receta intermedia";
+    } else {
+         return "receta larga";
     }    
-    }
+}
+
 public void aumentarTiempo(int minutos) {
     this.tiempo += minutos;
 }
+
 public static void main(String[] args) {
-    receta receta1, receta2;
-    receta1 = new receta("tarta de manzana", 45, "media", 5);
-    receta2 = new receta("pizza casera", 90, "media", 7);
+    Receta receta1 = new receta("tarta de manzana", 45, "media", 5);
+    Receta receta2 = new receta("pizza casera", 90, "media", 7);
   
     System.out.println("el nombre de la receta es: " + receta1.getNombre());
     System.out.println("el tiempo de la receta es: " + receta1.getTiempo());
