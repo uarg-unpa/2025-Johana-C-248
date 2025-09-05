@@ -1,55 +1,55 @@
-public class Receta {
-   private String nombre;
-   private int tiempo;
-   private Strings dificultad;
-   private Strings ingredientes;
+ public class Receta {
+     private String nombre;
+     private int tiempo;
+     private Strings dificultad;
+     private Strings ingredientes;
    
-   public Receta(Strings nombre, int tiempo, Strings dificultad, Strings ingredientes) {
-         this.nombre = nombre;
-         this.tiempo = tiempo;
-         this.dificultad = dificultad;
-         this.ingredientes = ingredientes;
-     }
+    public Receta(Strings nombre, int tiempo, Strings dificultad, Strings ingredientes) {
+        this.nombre = nombre;
+        this.tiempo = tiempo;
+        this.dificultad = dificultad;
+        this.ingredientes = ingredientes;
+    }
 
     public void setNombre(Strings nombre) {
-         this.nombre = nombre;
+        this.nombre = nombre;
     } 
 
     public Strings getNombre() {
-         return nombre;
+        return nombre;
     }     
 
-     public void setTiempo(int tiempo) {
-          this.tiempo = tiempo;
-     }
+    public void setTiempo(int tiempo) {
+        this.tiempo = tiempo;
+    }
 
     public int getTiempo() {
         return tiempo;
     }
     
     public void setDificultad(Strings dificultad) {
-         this.dificultad = dificultad;
+        this.dificultad = dificultad;
     }
 
     public Strings getDificultad() {
-         return dificultad;
+        return dificultad;
     }
  
     public void setIngredientes(Strings ingredientes) {
-           this.ingredientes = ingredientes;
+        this.ingredientes = ingredientes;
      }
     
     public Strings getIngredientes() { 
-           return ingredientes;
+        return ingredientes;
     }
 
     public Strings esTiempo() {
         if (this.tiempo < 30) {
-             return "receta rapida";
+            return "receta rapida";
     } else if (this.tiempo <60) {
-         return "receta intermedia";
+        return "receta intermedia";
     } else {
-         return "receta larga";
+        return "receta larga";
     }    
 }
 
