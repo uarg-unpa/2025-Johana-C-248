@@ -76,7 +76,7 @@ public static void main(String[] args) {
     System.out.println("la cantidad de ingredientes de la receta es: " + receta2.getIngredientes());
     System.out.println(receta2.esTiempo());
     receta2.aumentarTiempo(0);
-    Sistem.out.println("el nuevo tiempo de la receta es: " + receta2.getTiempo());
+    System.out.println("el nuevo tiempo de la receta es: " + receta2.getTiempo());
     System.out.println(receta2.esTiempo());
     }
 }
