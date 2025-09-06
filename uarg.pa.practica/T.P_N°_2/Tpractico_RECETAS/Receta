@@ -71,7 +71,7 @@ public static void main(String[] args) {
     System.out.println(receta1.esTiempo());
    
     System.out.println("el nombre de la receta es: " + receta2.getNombre());
-    System.out.println("el tiempo de la receta es: " + receeta2.getTtiempo());
+    System.out.println("el tiempo de la receta es: " + receta2.getTtiempo());
     System.out.println("la dificultad de la receta es: " + receta2.getDificultad());
     System.out.println("la cantidad de ingredientes de la receta es: " + receta2.getIngredientes());
     System.out.println(receta2.esTiempo());
