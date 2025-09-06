@@ -58,8 +58,8 @@ public void aumentarTiempo(int minutos) {
 }
 
 public static void main(String[] args) {
-    Receta receta1 = new receta("tarta de manzana", 45, "media", 5);
-    Receta receta2 = new receta("pizza casera", 90, "media", 7);
+    Receta receta1 = new Receta(nombre:"tarta de manzana", tiempo:45, dificultad:"media", ingredientes:5);
+    Receta receta2 = new Receta(nombre:"pizza casera", tiempo:90, dificultad:"media", ingredientes:7);
   
     System.out.println("el nombre de la receta es: " + receta1.getNombre());
     System.out.println("el tiempo de la receta es: " + receta1.getTiempo());
