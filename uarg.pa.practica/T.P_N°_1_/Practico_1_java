@@ -1,0 +1,19 @@
+public class Practico_1_java {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System,in);
+        int A, B, C, aux;
+        System.out.print("ingrese el valor de A:");
+        A = sc.nextInt();
+        System.out.print("ingrese el valor de B:");
+        B = sc.nextInt();
+        System.out.print("ingrese el valor de C;");
+        C = sc.nextInt();
+    
+        aux = C: // Guardamos el valor original de C
+        B = A;
+        C = A;
+        A = aux;
+
+        System.out.println("ahora A = " + A + ", B = " + B + ", C = " + C);
+    }
+}    
