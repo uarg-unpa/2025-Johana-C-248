@@ -2,9 +2,9 @@
      private String nombre;
      private int tiempo;
      private String dificultad;
-     private String ingredientes;
+     private int ingredientes;
    
-    public Receta(String nombre, int tiempo, String dificultad, String ingredientes) {
+    public Receta(String nombre, int tiempo, String dificultad, int ingredientes) {
         this.nombre = nombre;
         this.tiempo = tiempo;
         this.dificultad = dificultad;
@@ -35,11 +35,11 @@
         return dificultad;
     }
  
-    public void setIngredientes(String ingredientes) {
+    public void setIngredientes(int ingredientes) {
         this.ingredientes = ingredientes;
      }
     
-    public String getIngredientes() { 
+    public int getIngredientes() { 
         return ingredientes;
     }
 
@@ -58,8 +58,8 @@ public void aumentarTiempo(int minutos) {
 }
 
 public static void main(String[] args) {
-    Receta receta1 = new Receta(nombre:"tarta de manzana", tiempo:45, dificultad:"media", ingredientes:5);
-    Receta receta2 = new Receta(nombre:"pizza casera", tiempo:90, dificultad:"media", ingredientes:7);
+    Receta receta1 = new Receta("tarta de manzana", 45, "media", 5);
+    Receta receta2 = new Receta("pizza casera", 90,"media", 7);
   
     System.out.println("el nombre de la receta es: " + receta1.getNombre());
     System.out.println("el tiempo de la receta es: " + receta1.getTiempo());
@@ -71,7 +71,7 @@ public static void main(String[] args) {
     System.out.println(receta1.esTiempo());
    
     System.out.println("el nombre de la receta es: " + receta2.getNombre());
-    System.out.println("el tiempo de la receta es: " + receta2.getTtiempo());
+    System.out.println("el tiempo de la receta es: " + receta2.getTiempo());
     System.out.println("la dificultad de la receta es: " + receta2.getDificultad());
     System.out.println("la cantidad de ingredientes de la receta es: " + receta2.getIngredientes());
     System.out.println(receta2.esTiempo());
