@@ -1,14 +1,14 @@
 public class Alumno {
-    private Strings nombre;
-    private Strings apellido;
+    private String nombre;
+    private String apellido;
     private int edad;
-    private Strings carrera
+    private String carrera;
     private int telefono;
-    private Strings direccion;
+    private String direccion;
 
-public Alumno(Strings nombre, Strings apellido, int edad, Strings carrera, int tekefono, Strings direccion) {
+public Alumno(String nombre, String apellido, int edad, String carrera, int telefono, String direccion) {
     this.nombre = nombre;
-    this. apellido = apellido;
+    this.apellido = apellido;
     this.edad = edad;
     this.carrera = carrera;
     this.telefono = telefono;

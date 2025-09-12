@@ -1,2 +1,5 @@
 public class prueba_C/celular
-    public String(
+    public Chard modelo;
+    public String marca;
+    public String funciones
+    public 
