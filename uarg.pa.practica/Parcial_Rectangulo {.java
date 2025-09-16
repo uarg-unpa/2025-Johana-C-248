@@ -45,10 +45,23 @@ public class Rectangulo {
         }
 
 public static void main(String[] args) {
-    Scanner Rectangulo R1 = new Rectangulo R1(sistem.out.println("Ingrese la base del rectangulo 1: "), sistem.out.println("Ingrese la altura del rectangulo 1: "));
-    Scanner Rectangulo R2 = new Rectangulo R2(sistem.out.println("Ingrese la base del rectangulo 2: "), sistem.out.println("Ingrese la altura del rectangulo 2: "));
-    sistem.out.println("El area del rectangulo 1 es: " + R1.calcularArea());
-    sistem.out.println("El perimetro del rectangulo 2 es: " + R1.calcularPerimetro());
-    sistem.out.println("El area mayor del rectangulo es: " + R1.esMayorElArea(R2));  
-    }
+    Scanner Rectangulo.R1 = new Rectangulo.R1(System.in);
+    Scanner Rectangulo.R2 = new Rectangulo.R2(System.in);
+
+    System.out.print("Ingrese la base del rectangulo 1: ");
+    double base1 = Rectangulo.R1.nextDouble();
+    System.out.print("Ingrese la altura del rectangulo 1: ");
+    double altura1 = Rectangulo.R1.nextDouble();
+    Rectangulo R1 = new Rectangulo.R1(base1, altura1);
+
+    System.out.print("Ingrese la base del rectangulo 2: ");
+    double base2 = Rectangulo.R2.nextDouble();
+    System.out.print("Ingrese la altura del rectangulo 2: ");
+    double altura2 = Rectangulo.R2.nextDouble();
+    Rectangulo R2 = new Rectangulo.R2(base2, altura2);
+
+    System.out.println("El area del rectangulo 1 es: " + R1.calcularArea());
+    System.out.println("El perimetro del rectangulo 2 es: " + R2.calcularPerimetro());
+    System.out.println("El area mayor del rectangulo es: " + R1.esMayorElArea(R2));
+}
 }
