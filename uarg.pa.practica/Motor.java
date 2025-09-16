@@ -1,11 +1,11 @@
 public class Motor {
     public int cilindrada;
     public String tipo;
-    public char modelo;
+    public int modelo;
     public String marca;
-    public int serie;
+    public double serie;
 
-    public Motor(int cilindrada, String tipo, char modelo, String marca, int serie) {
+    public Motor(int cilindrada, String tipo, int modelo, String marca, double serie) {
         this.cilindrada = cilindrada;
         this.tipo = tipo;
         this.modelo = modelo;
@@ -26,8 +26,21 @@ public class Motor {
    }
 
    public String getTipo() {
-       return 
+       return tipo;
    }
-}     
+   public void setModelo(int modelo) {
+       this.modelo = modelo;
+   }
 
-}  
+   public int getModelo() {
+       return modelo;
+   }
+   public void setMarca(string marca) {
+       this.marca = marca;
+   }
+
+   public StringNBVC{
+    
+   }}
+    
+}     
