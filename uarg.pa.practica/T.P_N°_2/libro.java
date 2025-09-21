@@ -5,5 +5,7 @@ public class libro {
     private int aniodepublicacion;
 
 public libro(String titulo, String autor, String editorial, int aniodeúblicacion) {
+    this.titulo = titulo;
+    this.autor = autor;
     
 }

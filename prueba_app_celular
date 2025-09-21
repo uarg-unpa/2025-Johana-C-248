@@ -1,5 +1,8 @@
-public class prueba_C/celular
-    public Chard modelo;
+public class prueba_C/celular {
+    public double modelo;
     public String marca;
-    public String funciones
-    public 
+    public String funciones;
+    public double almacenamiento;
+
+    
+}
