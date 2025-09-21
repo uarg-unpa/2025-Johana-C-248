@@ -7,5 +7,6 @@ public class libro {
 public libro(String titulo, String autor, String editorial, int aniodeúblicacion) {
     this.titulo = titulo;
     this.autor = autor;
-    
+    this.editorial = editorial;
+    this.aniodepublicacion
 }
