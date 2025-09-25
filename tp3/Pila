@@ -1,12 +1,47 @@
 public class PilaEnteros {
   private char[] elementos;
-  private int cima;
+  private char cima;
   private final char MAX = 10;   
 
   public PilaEnteros() {
     elementos = new char[MAX];
-       cima = -1
+       cima = -1;
   }
 
-  public
+  public boolean estaVacia() {
+    return cima == -1;
+  } else{
+      estaLlena() {
+        return cima == MAX - 1;
+    }
+  }
+
+public void meter(char x) {
+   if (estaLlena()) {
+    System.out.println("pila esta llena");
+   } else {
+       elementos[++cima] = x;
+       System.out.println("se agrego el elemento" + x);
+       System.out.println("la cima es" + cima);
+   }
+  }
+
+  public char sacar() {
+   while (-- cima) {
+    return elementos[cima + 1];
+  } else {
+    System.out.println("pila esta vacia");
+    return 0;
+  }
+  }
+
+  public char cimaPila() {
+    do {
+      return elementos[cima];
+    } while (estaVacia()) {
+      System.out.println("pila esta sin elementos");
+      return 0;
+    }
+    }
+  }
 }
