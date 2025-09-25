@@ -1,0 +1,12 @@
+public class PilaEnteros {
+  private char[] elementos;
+  private int cima;
+  private final char MAX = 10;   
+
+  public PilaEnteros() {
+    elementos = new char[MAX];
+       cima = -1
+  }
+
+  public
+}
