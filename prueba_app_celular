@@ -1,2 +1,8 @@
-public class prueba_C/celular
-    public String(
+public class prueba_C/celular {
+    public double modelo;
+    public String marca;
+    public String funciones;
+    public double almacenamiento;
+
+    
+}
