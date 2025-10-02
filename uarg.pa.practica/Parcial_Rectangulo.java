@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Parcial_Rectangulo {
-    private double base,
+    private double base;
     private double altura;
 
     public Parcial_Rectangulo(double base, double altura) {
@@ -46,22 +46,24 @@ public class Parcial_Rectangulo {
         }
 
 public static void main(String[] args) {
-    Scanner R1 = new Scanner(System.in);
+    Scanner scanner1 = new Scanner(System.in);
 
     System.out.println("Ingrese la base del rectangulo 1: ");
-    double base1 = R1.nextDouble();
+    double base1 = scanner1.nextDouble();
     System.out.println("Ingrese la altura del rectangulo 1: ");
-    double altura1 = R1.nextDouble();
+    double altura1 = scanner1.nextDouble();
     Parcial_Rectangulo R1 = new Parcial_Rectangulo(base1, altura1);
+    scanner1.close();
 
-    Scanner R2 = new Scanner(System.in);
+    Scanner scanner2 = new Scanner(System.in);
 
-    System.out.print("Ingrese la base del rectangulo 2: ");
-    double base2 = R2.nextDouble();
-    System.out.print("Ingrese la altura del rectangulo 2: ");
-    double altura2 = R2.nextDouble();
+    System.out.println("Ingrese la base del rectangulo 2: ");
+    double base2 = scanner2.nextDouble();
+    System.out.println("Ingrese la altura del rectangulo 2: ");
+    double altura2 = scanner2.nextDouble();
     Parcial_Rectangulo R2 = new Parcial_Rectangulo(base2, altura2);
-    
+    scanner2.close();
+
     System.out.println("El area del rectangulo 1 es: " + R1.calcularArea());
     System.out.println("El perimetro del rectangulo 2 es: " + R2.calcularPerimetro());
     System.out.println("El area mayor del rectangulo es: " + R1.esMayorElArea(R2));
