@@ -1,0 +1,38 @@
+public class ColaChar {
+    private char[] elementos;
+    private char frente;
+    private char fin;
+    private final movible;
+
+    public ColaChar() {
+        elementos = new char[MAX];
+        frente = 0;
+        final = 0;
+    }
+
+    public boolean encolar(char elemento) {
+        if (fin < MAX) {
+            elementos[fin] = elemento;
+            fin++;
+            return true;
+        }
+        return false;
+    }
+
+    public char desencolar() {
+        if (frente < fin) {
+            char elemento = elementos[frente];
+            frente++;
+            return elemento;
+        }
+        return null;
+    }
+
+    public boolean esVacia() {
+        return frente == fin;
+    }
+
+    public boolean esLlena() {
+        return fin == MAX;
+    }
+}
