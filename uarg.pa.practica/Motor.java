@@ -68,9 +68,9 @@ public class Motor {
             return true;  
         } else {
             if (this.esAntiguo().equals("Diesel")) {
-                noesPotente = cilindrada + 500;
+                noEsPotente = cilindrada + 500;
             } else {
-                actualizarTipodeMotor("Gasolina");
+                actualizarTipoDeMotor("Gasolina");
             }   
         }
     }
