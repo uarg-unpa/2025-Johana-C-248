@@ -5,6 +5,16 @@ public class Motor {
     public String marca;
     public double serie;
 
+    public String toString() {
+        return "Motor{" +
+                "cilindrada=" + cilindrada +
+                ", tipo='" + tipo + '\'' +
+                ", modelo=" + modelo +
+                ", marca='" + marca + '\'' +
+                ", serie=" + serie +
+                '}';
+    }
+
     public Motor(int cilindrada, String tipo, int modelo, String marca, double serie) {
         this.cilindrada = cilindrada;
         this.tipo = tipo;
@@ -39,8 +49,49 @@ public class Motor {
        this.marca = marca;
    }
 
-   public StringNBVC{
+   public String getMarca() {
+       return marca;
+    }
     
-   }}
-    
-}     
+    public void setSerie(double serie) {
+         this.serie = serie;
+    }
+
+    public double getSerie() {
+         return serie;
+   }
+   
+    public Boolean esPotente() {
+        if (this.MotorPotencia > 1500) {
+            return true;
+        } else {
+            if (this.esAntiguo().equals("Diesel")) {
+                
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public Static String void tipoDeMotor() {
+        if (this.tipo.equals("Diesel")) {
+            return "Diesel";
+        } else {
+            if (this.tipo.equals("Gasolina")) {
+                return "Gasolina";
+            } else {
+                return "Electrico";
+            }
+        }
+    }
+
+    public Boolean esAntiguo() {
+        if (this.modelo < 2000) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+}
+         
