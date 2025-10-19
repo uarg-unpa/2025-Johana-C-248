@@ -86,5 +86,19 @@ public class ColaChar {
 
     }
 
-    
+public static void main(String[] args) {
+    Cola aux = elementos();
+    while (esVacia()) {
+        encolar(aux);
+        mover = desencolar();
+        elementos[mover] = cola;
 
+        if (mover < elementos.length) {
+            desencolar(aux) = insertar(cola);
+            elementos[mover] = encolar(cola);
+            return elementos;
+        }
+   }
+
+   
+}
