@@ -72,7 +72,19 @@ public class ColaChar {
         }
     }
 
-    public boolean sonIguales()
-        
+    public boolean sonIguales(Cola cola) {
+        do {
+            int elementos = desencolar();
+            int aux = cola.encolar();
+            
+            if (elementos == aux) {
+                return true;
+            }
+        } while (!noSonIguales()) {
+        return false;
+        }
 
     }
+
+    
+
