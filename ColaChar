@@ -96,9 +96,12 @@ public class ColaChar {
         ColaChar pares = new ColaChar();
 
         while (elementos.esVacia()) {
-            elementos.encolar(elementos);
-            mover = elementos.desencolar();
-            elementos[mover] = cola;
+            meter(elementos) = encolar(pila);
+            mover = elementos();
+            sacar(elementos);
+            encolar(pares) = elementos[cola];
+            guardar(pares) = elementos[cola];
+            desencolar(inpares) = elementos();
 
             if (mover % 2 == 0) {
                desencolar(elementos) = insertar(cola);
@@ -106,12 +109,12 @@ public class ColaChar {
                 return elementos;
             } else {
                 if (mover % 2 != 0) {
-                    elementos = desencolar(PilaChar);
+                    elementos = borrar(PilaChar);
                     return elementos;
             }
         }
     }
 
-    
+    public  
 
 }
