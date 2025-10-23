@@ -1,0 +1,120 @@
+public class ColaChar {
+    private char[] elementos;
+    private char frente;
+    private char fin;
+    private final movible;
+
+    public ColaChar() {
+        elementos = new char[MAX];
+        frente = 0;
+        final = 0;
+    }
+
+    public boolean encolar(char elemento) {
+        if (fin < MAX) {
+            elementos[fin] = elemento;
+            fin++;
+            return true;
+        }
+        return false;
+    }
+
+    public char desencolar() {
+        if (frente < fin) {
+            char elemento = elementos[frente];
+            frente++;
+            return elemento;
+        }
+        return null;
+    }
+
+    public boolean esVacia() {
+        return frente == fin;
+    }
+
+    public boolean esLlena() {
+        return fin == MAX;
+    }
+
+    public boolean borrar() {
+        for (char i = 0; i < fin - 1; i++) {
+            if (frente < 0) {
+                elementos[i] = elementos[i + 1];
+            fin--;
+            }
+            return true;
+        }
+        else {
+            frente = 0;
+            fin = 0;
+            return false;
+        }
+    }
+
+    public int contar() {
+        while (!esVacia()) {
+            desencolar();
+            encolar(mover++);
+        }
+        return mover;
+    }
+
+    public int sonRepetidos(char elemento) {
+        ColaChar sonRepetidos = new ColaChar();
+
+        int contador = 0;
+        int i = frente;
+        char aux;
+
+        if (elemento == elementos(frente)) {
+           return 1 + repetidos(elemento);
+        } else {
+            desencolar();
+            aux = elementos(i++);
+            encolar(aux);
+            aux = elementos(i);
+            desencolar(aux);
+            return repetidos(elemento);
+        }
+    }
+
+    public boolean sonIguales(Cola cola) {
+        do {
+            int elementos = desencolar();
+            int aux = cola.encolar();
+            
+            if (elementos == aux) {
+                return true;
+            }
+        } while (!noSonIguales()) {
+        return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        PilaChar elementos = new PilaChar();
+        ColaChar pares = new ColaChar();
+
+        while (elementos.esVacia()) {
+            meter(elementos) = encolar(pila);
+            mover = elementos();
+            sacar(elementos);
+            encolar(pares) = elementos[cola];
+            guardar(pares) = elementos[cola];
+            desencolar(inpares) = elementos();
+
+            if (mover % 2 == 0) {
+               desencolar(elementos) = insertar(cola);
+                elementos[mover] = encolar(cola);
+                return elementos;
+            } else {
+                if (mover % 2 != 0) {
+                    elementos = borrar(PilaChar);
+                    return elementos;
+            }
+        }
+    }
+
+    public  
+
+}
