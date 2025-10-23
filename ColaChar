@@ -58,8 +58,14 @@ public class ColaChar {
         }
         return mover;
     }
-    
-    public int repetidos(char elemento) {
+
+    public int sonRepetidos(char elemento) {
+        ColaChar sonRepetidos = new ColaChar();
+
+        int contador = 0;
+        int i = frente;
+        char aux;
+
         if (elemento == elementos(frente)) {
            return 1 + repetidos(elemento);
         } else {
@@ -83,22 +89,29 @@ public class ColaChar {
         } while (!noSonIguales()) {
         return false;
         }
-
     }
 
-public static void main(String[] args) {
-    Cola aux = elementos();
-    while (esVacia()) {
-        encolar(aux);
-        mover = desencolar();
-        elementos[mover] = cola;
+    public static void main(String[] args) {
+        PilaChar elementos = new PilaChar();
+        ColaChar pares = new ColaChar();
 
-        if (mover < elementos.length) {
-            desencolar(aux) = insertar(cola);
-            elementos[mover] = encolar(cola);
-            return elementos;
+        while (elementos.esVacia()) {
+            elementos.encolar(elementos);
+            mover = elementos.desencolar();
+            elementos[mover] = cola;
+
+            if (mover % 2 == 0) {
+               desencolar(elementos) = insertar(cola);
+                elementos[mover] = encolar(cola);
+                return elementos;
+            } else {
+                if (mover % 2 != 0) {
+                    elementos = desencolar(PilaChar);
+                    return elementos;
+            }
         }
-   }
+    }
 
-   
+    
+
 }
