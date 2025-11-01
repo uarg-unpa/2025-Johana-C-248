@@ -2,11 +2,11 @@ impot java.util.Scanner;
 
 public class Practico_1_ejecicio_4 {
     public static void main (String[] args) {
-        public int NUMRO1;
-        public int NUMRO2;
-        public int NUMRO3;
+        int NUMRO1;
+        int NUMRO2;
+        int NUMRO3;
 
-        public 
+        Scanner numero = new Scanner(System.in);
         System.out.println("Ingrese 3 números enteros: ");
         Scanner numero = new Scanner(System.in);
         int numero1 = numero.nextInt();
@@ -30,4 +30,5 @@ public class Practico_1_ejecicio_4 {
             String NUMRO3 = numero.nextLine();
         }
         numero.close();
+    }
 }
