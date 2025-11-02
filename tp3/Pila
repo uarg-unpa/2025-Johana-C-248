@@ -80,4 +80,33 @@ public char PilaCima () {
       x = aux.sacar();
       pila.meter(x);
   }
+  return pila.elementoCima();
+}
+
+public char Copia () {
+  Pila copia = new Pila();
+  Pila aux = new Pila();
+
+  while (this.estaVacia() != true) {
+      char x = this.sacar();
+      aux.meter(x);
+      copia.meter(x);
+  }
+
+  while (aux.estaVacia() != true) {
+      char x = aux.sacar();
+      this.meter(x);
+  }
+
+  return copia;
+}
+
+public boolean String esPalindromo() {
+  boolean esPalidromo = true;
+  if(System.startswith("") || System.endswith("") || System.length() == izquierda.length() == derecha.length()) {
+      return true;
+  } else {
+    return false;
+  }
+}
 
