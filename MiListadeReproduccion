@@ -1,0 +1,18 @@
+public class MiListadeReproduccion {
+    private String nombreCancion;
+    private String genero;
+    private String interprete;
+    private int año;
+    private final int MAX = 100;
+    private int frente;
+    private int final;
+
+    public MiListadeReproduccion() {
+        nombreCancion = new String [MAX];
+        frente = 0;
+        final = 0;
+    }
+
+    public void agregarCancion(String nombre, String genero, String interprete, int año, int duracion) {
+
+}
