@@ -32,7 +32,7 @@ public class ColaInt {
         fin--; // reduce fin tras el desplazamiento
         return aux;
 
-public class Cola{
+public class Cola {
     private final int maxcola=5;
     private int frente, ultimo;
     private int []elementos;
@@ -42,8 +42,9 @@ public class Cola{
         ultimo=0;
         elementos=new int[maxcola];
     }
-    private int siguiente(int subind)
-    {
+
+    private int siguiente(int subind) {
+    
        (....)
     }
     public boolean estaVacia()
