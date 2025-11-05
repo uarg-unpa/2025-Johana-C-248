@@ -1,0 +1,68 @@
+public class TemaMusical {
+   private String interprete;
+   private String genero;
+   private String año;
+   private String duracion;
+
+    public TemaMusical(String interprete, String genero, String año, String duracion) {
+         this.interprete = interprete;
+         this.genero = genero;
+         this.año = año;
+         this.duracion = duracion;
+    }
+
+    public void setInterprete(String interprete) {
+         this.interprete = interprete;
+    }
+
+    public String getInterprete() {
+         return interprete;
+    }
+
+    public void setGenero(String genero) {
+         this.genero = genero;
+    }
+
+    public String getGenero() {
+         return genero;
+    }
+
+    public void setAño(String año) {
+         this.año = año;
+    }
+
+    public String getAño() {
+         return año;
+    }
+
+    public void setDuracion(String duracion) {
+         this.duracion = duracion;
+    }
+
+    public String getDuracion() {
+         return duracion;
+    }
+
+    public String toString() {
+        return "TemaMusical" + interprete + ", " + genero + ", " + año + ", " + duracion + '}';
+    }
+
+    public void mostrarInformacion() {
+        System.out.println(this.toString());
+    }
+
+    public String guardar() {
+        return interprete + "," + genero + "," + año + "," + duracion;
+    }
+
+    public String borrar() {
+     return "¿desea borrar el tema musical " + this.toString() + "?";
+    }
+
+    public String reproducir() {
+     return "Reproduciendo: " + this.toString();
+    }
+
+    
+
+}
