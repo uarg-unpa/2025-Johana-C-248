@@ -1,0 +1,48 @@
+public class coladeEntero {
+    private int[] elementos;
+    private int frente;
+    private int fin;
+    private final int MAX = 100;
+
+    public coladeEntero() {
+        elementos = new int[MAX];
+        frente = 0;
+        fin = 0;
+    }
+
+    public boolean masElementos(ColaInt q2) {
+        if (q2 > aux) {
+            int q2 = q2.frente + q2.fin;
+            int aux = this.frente + this.fin;
+            return true;
+        } else {
+            q2 = q2 + 1;
+            return false;
+        }
+    }
+
+   public static void main(String[] args) {
+    PilaChar p = new PilaChar();
+
+    public void determinarVocales() {
+        for (int i = 0; i < elementos.length; i++) {
+            char c = elementos[i];
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                System.out.println("Vocal encontrada: " + c);
+            }
+        }
+    }
+
+   public void apilar(char c) {
+       if (elementos.length < MAX) {
+           elementos[fin] = c;
+           fin++;
+       } else {
+           System.out.println("Pila llena");
+       }
+   }
+
+   public void vaciar() {
+       System.out.println("Pila vacía: " + elementos);
+   }
+}
