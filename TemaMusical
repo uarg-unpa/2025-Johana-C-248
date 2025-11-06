@@ -116,26 +116,31 @@ public class TemaMusical {
      }
 
      public Boolean agregarCancion(TemaMusical nuevaCancion) {
-          if(frente == finalCola) {
-               canciones[frente] = null;
+          if(frente == finalCola && estaVacia()) {
+               return canciones[frente] = nuevaCancion;
+           } else {
+               estaVacia();
                System.out.println("La lista de canciones está vacía");
                return true;
+           }
+     }
+     
+     public Boolean estaLlena() {
+               return (cantidadCanciones + 1) % MAX_CANCIONES == frente;
+               System.out.println("La lista de canciones está llena");
+     }
 
-               if (cantidadCanciones < MAX_CANCIONES) {
+     public void encolarCancion(TemaMusical nuevaCancion) {
                     canciones[finalCola] = nuevaCancion;
                     finalCola = (finalCola + 1) % MAX_CANCIONES;
                     cantidadCanciones++;
                     System.out.println("Canción agregada: " + canciones[finalCola].toString());
-                    return true;
-               } else {
-                    System.out.println("No se puede agregar más canciones, el musicalizador está lleno.");
-                    return false;
-               }
-          } else {
-               System.out.println("La lista de canciones ya tiene canciones");
-               return false;
-          }
      }
 
-    public void 
+     public TemaMusical desencolarCancion() {
+          TemaMusical desencolar = canciones[frente];
+          frente = (frente + 1) % MAX_CANCIONES;
+          cantidadCanciones--;
+          return desencolar;
+     }
 }
