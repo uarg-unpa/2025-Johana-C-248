@@ -52,17 +52,90 @@ public class TemaMusical {
     }
 
     public String guardar() {
-        return interprete + "," + genero + "," + año + "," + duracion;
+        System.out.println("¿guardar informacio? " + interprete + "," + genero + "," + año + "," + duracion);
+       
+        if(true){
+            System.out.println("informacion guardada");
+        return "Guardado";
+            } else {
+               System.out.println("la informacion puede perderse ¿continuar?");
+               return "No guardado";
+            }
     }
 
     public String borrar() {
-     return "¿desea borrar el tema musical " + this.toString() + "?";
+     System.out.println("¿desea borrar el tema musical: " + this.toString() + "?");
+     return "Borrado";
+
+     if(true){
+         System.out.println("El tema musical:" + this.toString() + " ha sido borrado");
+         return "Borrado";
+     } else {
+         System.out.println("operacion cancelada");
+         return "No borrado";
+     }
     }
 
     public String reproducir() {
-     return "Reproduciendo: " + this.toString();
+     System.out.println(this.toString());
+     return "Reproduciendo";
     }
 
-    
+    public String pausar() {
+     System.out.println(this.toString());
+     return "Pausado";
+    }
 
+    public String detener() {
+     System.out.println(this.toString());
+     return "Detenido";
+    }
+
+    public static void main(String[] args) {
+        TemaMusical tema1 = new TemaMusical(this.toString());
+        tema1.mostrarInformacion();
+        tema1.guardar();
+        tema1.reproducir();
+        tema1.pausar();
+        tema1.detener();
+        tema1.borrar();
+    }
+
+    public class Musicalizador {
+     private TemaMusical[] canciones;
+     private int cantidadCanciones;
+     private int frente;
+     private int finalCola;
+     private final int MAX_CANCIONES = 100;
+
+     public Musicalizador() {
+         canciones = new TemaMusical[MAX_CANCIONES];
+         this.cantidadCanciones = 0;
+         this.frente = 0;
+         this.finalCola = 0;
+     }
+
+     public Boolean agregarCancion(TemaMusical nuevaCancion) {
+          if(frente == finalCola) {
+               canciones[frente] = null;
+               System.out.println("La lista de canciones está vacía");
+               return true;
+
+               if (cantidadCanciones < MAX_CANCIONES) {
+                    canciones[finalCola] = nuevaCancion;
+                    finalCola = (finalCola + 1) % MAX_CANCIONES;
+                    cantidadCanciones++;
+                    System.out.println("Canción agregada: " + canciones[finalCola].toString());
+                    return true;
+               } else {
+                    System.out.println("No se puede agregar más canciones, el musicalizador está lleno.");
+                    return false;
+               }
+          } else {
+               System.out.println("La lista de canciones ya tiene canciones");
+               return false;
+          }
+     }
+
+    public void 
 }
