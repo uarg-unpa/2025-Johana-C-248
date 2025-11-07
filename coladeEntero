@@ -4,6 +4,10 @@ public class coladeEntero {
     private int fin;
     private final int MAX = 100;
 
+    public int siguiente() {
+        return (frente + 1) % MAX;
+    }
+
     public coladeEntero() {
         elementos = new int[MAX];
         frente = 0;
@@ -18,6 +22,29 @@ public class coladeEntero {
         return fin == MAX;
     }
 
+    public void insertar(int numero) {
+        elementos[fin] = numero;
+        fin = siguiente(fin);
+    }
+
+    public int eliminar() {
+        int aux = elementos[frente];
+        frente = siguiente(frente);
+        return aux;
+    }
+
+    public int tamano() {
+        return (fin - frente + MAX) % MAX;
+    }
+
+    public boolean masElementos(ColaInt q2) {
+        if (q2.tamano() > this.tamano()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public boolean masElementos(ColaInt q2) {
         if (q2 > aux) {
             int q2 = q2.frente + q2.fin;
@@ -28,6 +55,20 @@ public class coladeEntero {
             return false;
         }
     }
+
+    public boolean borrar() {
+        if (!estaVacia()) {
+            frente = 0;
+            fin = 0;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void mostrarColas(ColaInt q2, ColaInt aux) {
+    System.out.println("Cola vacía: " + q2.elementos + "cola auxiliar vacia: " + aux.elementos);
+   }
 
    public static void main(String[] args) {
     PilaChar p = new PilaChar();
