@@ -10,6 +10,14 @@ public class coladeEntero {
         fin = 0;
     }
 
+    public Boolean estaVacia() {
+        return frente == fin;
+    }
+
+    public Boolean estaLlena() {
+        return fin == MAX;
+    }
+
     public boolean masElementos(ColaInt q2) {
         if (q2 > aux) {
             int q2 = q2.frente + q2.fin;
