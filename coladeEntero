@@ -70,19 +70,52 @@ public class coladeEntero {
     System.out.println("Cola vacía: " + q2.elementos + "cola auxiliar vacia: " + aux.elementos);
    }
 
+   public class PilaVocal {
+    private char[] elementos;
+    private int fin;
+    private final int MAX = 100;
+
+    public PilaVocal() {
+        elementos = new char[MAX];
+        fin = 0;
+    }
    public static void main(String[] args) {
-    PilaChar p = new PilaChar();
+    PilaVocal p = new PilaVocal();
+
+    public void apilarTodo() {
+    p.apilar('a') + p.apilar('b') + p.apilar('c') + p.apilar('d') + p.apilar('e') + p.apilar('f') + p.apilar('g') + p.apilar('h') + p.apilar('i');
+    p.determinarVocales() + " ", p.vaciar();
+    }
 
     public void determinarVocales() {
         for (int i = 0; i < elementos.length; i++) {
             char c = elementos[i];
             if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
                 System.out.println("Vocal encontrada: " + c);
+            } else {
+                System.out.println("No es vocal: " + c);
             }
+        return;
         }
     }
 
-   public void apilar(char c) {
+   public void mostrarVocales() {
+       System.out.println("Vocales en la pila: " + elementos);
+   }
+
+    public boolean sumarVocales() {
+        int contador = 0;
+        for (int i = 0; i < elementos.length; i++) {
+            char c = elementos[i];
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contador++;
+            }
+        System.out.println("Número de vocales en la pila: " + contador);
+        return true;
+    }
+
+    public void mostrarVocales() {
+        System.out.println("Vocales en la pila: " + elementos);
        if (elementos.length < MAX) {
            elementos[fin] = c;
            fin++;
@@ -91,7 +124,8 @@ public class coladeEntero {
        }
    }
 
-   public void vaciar() {
+   public boolean volverEstadoOriginal() {
        System.out.println("Pila vacía: " + elementos);
+       return true;
    }
 }
