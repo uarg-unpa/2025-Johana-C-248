@@ -97,13 +97,8 @@ public class Empleado {
             System.out.println(emp3);
 
         public boolean ganaMasQue(Empleado otro) {
-            return this.legajo + this.sueldo > otro.legajo + otro.sueldo;
-            if (this.legajo + this.sueldo > otro.legajo + otro.sueldo) {
-                System.out.println("el empleado que gana mas es: " + this.getNombre());
-            } else if (emp1.sueldo < emp2.sueldo) {
-                System.out.println(emp2.getNombre() + " gana más que " + emp1.getNombre());
-                emp1.setLegajo(emp1.getLegajo() - 1);
-                emp2.setLegajo(emp2.getLegajo() + 1);
+            if (emp3.getSueldo() > emp1.getSueldo()) {
+                System.out.println("el empleado que gana mas es: " + this.Empleado());
             } else {
                 System.out.println("Ambos empleados ganan lo mismo.");
                 emp1.setLegajo(emp1.getLegajo());
