@@ -1,0 +1,114 @@
+public class Empleado {
+    private String nombre;
+    private String apellido;
+    private String dni;
+    private double sueldo;
+    private int legajo;
+
+    public Empleado(String nombre, String apellido, String dni, double sueldo, int legajo) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.dni = dni;
+        this.sueldo = sueldo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public int getLegajo() {
+        return legajo;
+    }
+
+    public void setLegajo(int legajo) {
+        this.legajo = legajo;
+    }
+
+    public String toString() {
+        return "Empleado{" +
+                "nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", dni='" + dni + '\'' +
+                ", sueldo=" + sueldo +
+                ", legajo=" + legajo +
+                '}';
+    }
+
+    public boolean ganaMasQue(Empleado otro) {
+        while (this.legajo + this.sueldo > otro.legajo + otro.sueldo) {
+            comparar(this, otro);
+            if (this.sueldo > otro.sueldo) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    public void comparar(Empleado emp1, Empleado emp2) {
+        System.out.println("Comparando empleados: " + emp1.getNombre() + " y " + emp2.getNombre());
+        if (emp1.getSueldo() > emp2.getSueldo()) {
+            System.out.println(emp1.getNombre() + " gana más que " + emp2.getNombre());
+            this.legajo += 1;
+        } else if (emp1.getSueldo() < emp2.getSueldo()) {
+            System.out.println(emp2.getNombre() + " gana más que " + emp1.getNombre());
+            this.legajo -= 1;
+        } else {
+            System.out.println("Ambos empleados ganan lo mismo.");
+        }
+    }
+
+    public class Empresa {
+        public static void main(String[] args) {
+            Empleado emp1 = new Empleado("Juan", "Perez", "12345678", 50000, 1);
+            Empleado emp2 = new Empleado("Ana", "Gomez", "87654321", 60000, 2);
+            Empleado emp3 = new Empleado("Luis", "Martinez", "11223344", 55000, 3);
+
+            System.out.println(emp1);
+            System.out.println(emp2);
+            System.out.println(emp3);
+
+        public boolean ganaMasQue(Empleado otro) {
+            return this.legajo + this.sueldo > otro.legajo + otro.sueldo;
+            if (this.legajo + this.sueldo > otro.legajo + otro.sueldo) {
+                System.out.println("el empleado que gana mas es: " + this.getNombre());
+            } else if (emp1.sueldo < emp2.sueldo) {
+                System.out.println(emp2.getNombre() + " gana más que " + emp1.getNombre());
+                emp1.setLegajo(emp1.getLegajo() - 1);
+                emp2.setLegajo(emp2.getLegajo() + 1);
+            } else {
+                System.out.println("Ambos empleados ganan lo mismo.");
+                emp1.setLegajo(emp1.getLegajo());
+                emp2.setLegajo(emp2.getLegajo());
+            }
+        }
+    }
+}
