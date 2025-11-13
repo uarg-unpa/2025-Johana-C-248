@@ -1,0 +1,112 @@
+public class Pila {
+  private char[] elementos;
+  private char cima;
+  private final char MAX = 10;   
+
+  public Pila() {
+    elementos = new char[MAX];
+      cima = -1;
+  }
+
+  public boolean estaVacia() {
+      return cima == -1;
+  } else{
+      estaLlena() {
+        return cima == MAX - 1;
+      }
+  }
+
+  public void meter(char x) {
+      if (estaLlena()) {
+        System.out.println("pila esta llena");
+    } else {
+        elementos[++cima] = x;
+        System.out.println("se agrego el elemento" + x);
+        System.out.println("la cima es" + cima);
+    }
+}
+
+  public char sacar() {
+    if (estaVacia()) {
+      System.out.println("pila esta vacia");
+      return 0;
+    } else {
+      return elementos[cima--];
+    }
+  }
+
+  public Pila() {
+    Pila pila = new Pila();
+    Pila aux = new Pila();
+
+    System.out.println("Ingrese 10 numeros enteros");
+    for (char i = 0; i < 10; i++) {
+      Scanner Pila = new Scanner(System.in);
+      char x = Pila.nextChar();
+      pila.meter(x);
+    }
+
+    for (int i = 0; i < 10; i++) {
+      Scanner aux = new Scanner(System.in);
+      char x = aux.nextChar();
+      aux.meter(x);
+    }
+
+    int x;
+      while (pila.estaVacia() == false) {
+          x = pila.sacar();
+        if (x % 2 == 0) {
+            aux.meter(x);
+        } else {
+            pila.meter(x);
+        }
+      }
+
+public elementoCima() {
+  if (estaVacia()) {
+    System.out.println("pila vacia");
+    return 0;
+  } else {
+    return elementos[cima];
+  }
+}
+
+public char PilaCima () {
+  while (pila.estaVacia() == false) {
+      x = pila.sacar();
+      aux.meter(x);
+  }
+  while (aux.estaVacia() == false) {
+      x = aux.sacar();
+      pila.meter(x);
+  }
+  return pila.elementoCima();
+}
+
+public char Copia () {
+  Pila copia = new Pila();
+  Pila aux = new Pila();
+
+  while (this.estaVacia() != true) {
+      char x = this.sacar();
+      aux.meter(x);
+      copia.meter(x);
+  }
+
+  while (aux.estaVacia() != true) {
+      char x = aux.sacar();
+      this.meter(x);
+  }
+
+  return copia;
+}
+
+public boolean String esPalindromo() {
+  boolean esPalidromo = true;
+  if(System.startswith("") || System.endswith("") || System.length() == izquierda.length() == derecha.length()) {
+      return true;
+  } else {
+    return false;
+  }
+}
+

@@ -1,0 +1,97 @@
+public class Persona-C&O {
+    public String apellido;
+    public int edad;
+    public int dni;
+    public String sexo;
+    public double peso;
+    public double altura;
+
+    public Persona-C&O(String apellido, int edad, int dni, String sexo, double peso, double altura) {
+        apellido = "";
+        edad = edad, + "años";
+        dni = 00.000.000;
+        sexo = "H", hombre; "M", mujer;
+        peso = 0.0 "kg";
+        altura = 0.0 "m";
+    }
+
+    public int calcularIMC() {
+        double imc = peso / (altura * altura);
+        if (imc < 18) {
+            System.out.println("Bajo peso");
+            return;
+        } else if (imc >= 18 && imc <= 25) {
+            System.out.println("Peso ideal");
+            return;
+        } else if (imc > 25) {
+            System.out.println("Sobrepeso");
+            return;
+        }
+    }
+
+    public boolean esMayorDeEdad() {
+        if (edad >= 18) {
+            System.out.println("Es mayor de edad");
+            return true;
+        } else {
+            System.out.println("Es menor de edad");
+            return false;
+        }
+    }
+
+    public esMayorQue(Persona p) {
+        if (this.edad > p.edad) {
+            return true;
+        } else if (this.edad < p.edad) {
+              return false;
+        }
+    }
+
+    public static void main(String[] args) {
+        Persona-C&O P1 = new Persona C&O ();
+        Persona-C&O P2 = new Persona C&O ();
+
+        System.out.println("Ingrese los datos:", "Apellido:", + apellido, "Edad:", + edad, "DNI:", + dni, "Sexo (H/M):", + sexo, "Peso (kg):", + peso, "Altura (m):", + altura);
+        P1.calcularIMC();
+        if (P1.peso + "kg" < 18) {
+            System.out.println(P1 + "Esta bajo de su peso ideal");
+        } else if (P1.peso + "kg" >= 18 && P1.peso + "kg" <= 25) {
+            System.out.println(P1 +"Esta en su peso ideal");
+        } else if (P1.peso + "kg" > 25) {
+            System.out.println(P1 + "Tiene sobrepeso");
+        }
+
+        System.out.println("Ingrese los datos:", "Apellido:", + apellido, "Edad:", + edad, "DNI:", + dni, "Sexo (H/M):", + sexo, "Peso (kg):", + peso, "Altura (m):", + altura);
+        P2.calcularIMC();
+        if (P2.peso + "kg" < 18) {
+            System.out.println(P2 + "Esta bajo de su peso ideal");
+        } else if (P2.peso + "kg" >= 18 && P2.peso + "kg" <= 25) {
+            System.out.println(P2 +"Esta en su peso ideal");
+        } else if (P2.peso + "kg" > 25) {
+            System.out.println(P2 + "Tiene sobrepeso");
+        }
+
+       
+
+        public boolean esMayorDeEdad() { 
+            if (P1.edad >= 18) {
+                System.out.println(P1 + "Es mayor de edad");
+            } else {
+                System.out.println(P1 + "Es menor de edad");
+            }
+    
+            if (P2.edad >= 18) {
+                System.out.println(P2 + "Es mayor de edad");
+            } else {
+                System.out.println(P2 + "Es menor de edad");
+            }
+        
+            if(P2.edad > P1.edad) {
+                System.out.println(P2 + "Es mayor de edad");
+            } else {
+                System.out.println(P1 + "Es mayor de edad");
+            }
+        
+        System.out.println("Cantidad de personas mayores de edad:" + esMayorDeEdad());
+    }
+}
