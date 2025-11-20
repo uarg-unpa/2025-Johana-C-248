@@ -1,0 +1,21 @@
+public class Pilaejercicio5 {
+    private elementos;
+    private cima;
+    private final MAX = 10
+
+    public Pilaejercicio5() {
+       Pila pila = new Pila();
+       Pila aux = new Pila();
+         int x;
+            while (pila.estaVacia() == false) {
+                x = pila.sacar();
+                if (x % 2 == 0) {
+                    aux.meter(x);
+                } else {
+                    pila.meter(x);
+                }
+                
+            }
+
+    }
+}

@@ -1,0 +1,131 @@
+public class coladeEntero {
+    private int[] elementos;
+    private int frente;
+    private int fin;
+    private final int MAX = 100;
+
+    public int siguiente() {
+        return (frente + 1) % MAX;
+    }
+
+    public coladeEntero() {
+        elementos = new int[MAX];
+        frente = 0;
+        fin = 0;
+    }
+
+    public Boolean estaVacia() {
+        return frente == fin;
+    }
+
+    public Boolean estaLlena() {
+        return fin == MAX;
+    }
+
+    public void insertar(int numero) {
+        elementos[fin] = numero;
+        fin = siguiente(fin);
+    }
+
+    public int eliminar() {
+        int aux = elementos[frente];
+        frente = siguiente(frente);
+        return aux;
+    }
+
+    public int tamano() {
+        return (fin - frente + MAX) % MAX;
+    }
+
+    public boolean masElementos(ColaInt q2) {
+        if (q2.tamano() > this.tamano()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean masElementos(ColaInt q2) {
+        if (q2 > aux) {
+            int q2 = q2.frente + q2.fin;
+            int aux = this.frente + this.fin;
+            return true;
+        } else {
+            q2 = q2 + 1;
+            return false;
+        }
+    }
+
+    public boolean borrar() {
+        if (!estaVacia()) {
+            frente = 0;
+            fin = 0;
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void mostrarColas(ColaInt q2, ColaInt aux) {
+    System.out.println("Cola vacía: " + q2.elementos + "cola auxiliar vacia: " + aux.elementos);
+   }
+
+   public class PilaVocal {
+    private char[] elementos;
+    private int fin;
+    private final int MAX = 100;
+
+    public PilaVocal() {
+        elementos = new char[MAX];
+        fin = 0;
+    }
+   public static void main(String[] args) {
+    PilaVocal p = new PilaVocal();
+
+    public void apilarTodo() {
+    p.apilar('a') + p.apilar('b') + p.apilar('c') + p.apilar('d') + p.apilar('e') + p.apilar('f') + p.apilar('g') + p.apilar('h') + p.apilar('i');
+    p.determinarVocales() + " ", p.vaciar();
+    }
+
+    public void determinarVocales() {
+        for (int i = 0; i < elementos.length; i++) {
+            char c = elementos[i];
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                System.out.println("Vocal encontrada: " + c);
+            } else {
+                System.out.println("No es vocal: " + c);
+            }
+        return;
+        }
+    }
+
+   public void mostrarVocales() {
+       System.out.println("Vocales en la pila: " + elementos);
+   }
+
+    public boolean sumarVocales() {
+        int contador = 0;
+        for (int i = 0; i < elementos.length; i++) {
+            char c = elementos[i];
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contador++;
+            }
+        System.out.println("Número de vocales en la pila: " + contador);
+        return true;
+    }
+
+    public void mostrarVocales() {
+        System.out.println("Vocales en la pila: " + elementos);
+       if (elementos.length < MAX) {
+           elementos[fin] = c;
+           fin++;
+       } else {
+           System.out.println("Pila llena");
+       }
+   }
+
+   public boolean volverEstadoOriginal() {
+       System.out.println("Pila vacía: " + elementos);
+       return true;
+   }
+}

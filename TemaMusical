@@ -1,0 +1,146 @@
+public class TemaMusical {
+   private String interprete;
+   private String genero;
+   private String año;
+   private String duracion;
+
+    public TemaMusical(String interprete, String genero, String año, String duracion) {
+         this.interprete = interprete;
+         this.genero = genero;
+         this.año = año;
+         this.duracion = duracion;
+    }
+
+    public void setInterprete(String interprete) {
+         this.interprete = interprete;
+    }
+
+    public String getInterprete() {
+         return interprete;
+    }
+
+    public void setGenero(String genero) {
+         this.genero = genero;
+    }
+
+    public String getGenero() {
+         return genero;
+    }
+
+    public void setAño(String año) {
+         this.año = año;
+    }
+
+    public String getAño() {
+         return año;
+    }
+
+    public void setDuracion(String duracion) {
+         this.duracion = duracion;
+    }
+
+    public String getDuracion() {
+         return duracion;
+    }
+
+    public String toString() {
+        return "TemaMusical" + interprete + ", " + genero + ", " + año + ", " + duracion + '}';
+    }
+
+    public void mostrarInformacion() {
+        System.out.println(this.toString());
+    }
+
+    public String guardar() {
+        System.out.println("¿guardar informacio? " + interprete + "," + genero + "," + año + "," + duracion);
+       
+        if(true){
+            System.out.println("informacion guardada");
+        return "Guardado";
+            } else {
+               System.out.println("la informacion puede perderse ¿continuar?");
+               return "No guardado";
+            }
+    }
+
+    public String borrar() {
+     System.out.println("¿desea borrar el tema musical: " + this.toString() + "?");
+     return "Borrado";
+
+     if(true){
+         System.out.println("El tema musical:" + this.toString() + " ha sido borrado");
+         return "Borrado";
+     } else {
+         System.out.println("operacion cancelada");
+         return "No borrado";
+     }
+    }
+
+    public String reproducir() {
+     System.out.println(this.toString());
+     return "Reproduciendo";
+    }
+
+    public String pausar() {
+     System.out.println(this.toString());
+     return "Pausado";
+    }
+
+    public String detener() {
+     System.out.println(this.toString());
+     return "Detenido";
+    }
+
+    public static void main(String[] args) {
+        TemaMusical tema1 = new TemaMusical(this.toString());
+        tema1.mostrarInformacion();
+        tema1.guardar();
+        tema1.reproducir();
+        tema1.pausar();
+        tema1.detener();
+        tema1.borrar();
+    }
+
+    public class Musicalizador {
+     private TemaMusical[] canciones;
+     private int cantidadCanciones;
+     private int frente;
+     private int finalCola;
+     private final int MAX_CANCIONES = 100;
+
+     public Musicalizador() {
+         canciones = new TemaMusical[MAX_CANCIONES];
+         this.cantidadCanciones = 0;
+         this.frente = 0;
+         this.finalCola = 0;
+     }
+
+     public Boolean agregarCancion(TemaMusical nuevaCancion) {
+          if(frente == finalCola && estaVacia()) {
+               return canciones[frente] = nuevaCancion;
+           } else {
+               estaVacia();
+               System.out.println("La lista de canciones está vacía");
+               return true;
+           }
+     }
+     
+     public Boolean estaLlena() {
+               return (cantidadCanciones + 1) % MAX_CANCIONES == frente;
+               System.out.println("La lista de canciones está llena");
+     }
+
+     public void encolarCancion(TemaMusical nuevaCancion) {
+                    canciones[finalCola] = nuevaCancion;
+                    finalCola = (finalCola + 1) % MAX_CANCIONES;
+                    cantidadCanciones++;
+                    System.out.println("Canción agregada: " + canciones[finalCola].toString());
+     }
+
+     public TemaMusical desencolarCancion() {
+          TemaMusical desencolar = canciones[frente];
+          frente = (frente + 1) % MAX_CANCIONES;
+          cantidadCanciones--;
+          return desencolar;
+     }
+}

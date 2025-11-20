@@ -1,0 +1,19 @@
+public class Cuenta {
+    private double saldo; 
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+}
+
+public class BancoApp {
+    public static void main(String[] args) {
+        Cuenta c1 = new Cuenta();
+        c1.saldo = -5000; 
+        System.out.println("Saldo actual: " + c1.saldo);
+    }
+}
